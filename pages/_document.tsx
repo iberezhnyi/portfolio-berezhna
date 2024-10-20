@@ -22,6 +22,7 @@ const Document: FC<DocumentProps> = () => {
           href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
         />
       </Head>
+
       <body>
         <Main />
         <NextScript />

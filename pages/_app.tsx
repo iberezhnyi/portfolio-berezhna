@@ -17,6 +17,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Create Next App</title>
       </Head>
+
       <div className={poppins.className}>
         <Component {...pageProps} />
       </div>
