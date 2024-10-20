@@ -1,12 +1,17 @@
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+import { FC } from 'react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
-export default function Home() {
+const Home: FC = () => {
   return (
     <>
       <Header />
+
       <main>Main content</main>
+
       <Footer />
     </>
   )
 }
+
+export default Home

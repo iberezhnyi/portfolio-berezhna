@@ -1,7 +1,8 @@
-import '@/styles/globals.css'
+import { FC } from 'react'
 import type { AppProps } from 'next/app'
-import { Poppins } from 'next/font/google'
 import Head from 'next/head'
+import { Poppins } from 'next/font/google'
+import '@/styles/globals.css'
 
 const poppins = Poppins({
   weight: ['400', '500', '600'],
@@ -9,7 +10,7 @@ const poppins = Poppins({
   display: 'swap',
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -22,3 +23,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   )
 }
+
+export default App
