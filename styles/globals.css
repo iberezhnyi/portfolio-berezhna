@@ -172,6 +172,10 @@ button:hover {
 
 /* Breakpoints */
 @media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -181,4 +185,8 @@ button:hover {
 }
 
 @media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
 }
