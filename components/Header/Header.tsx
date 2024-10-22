@@ -1,57 +1,79 @@
-import { FC } from 'react'
-import './header.css'
+import { FC, useState } from 'react'
+import css from './header.module.css'
 
 const Header: FC = () => {
+  const [isMenuShown, setIsMenuShown] = useState(false)
+
+  const handleMenuClick = () => {
+    setIsMenuShown((prev) => !prev)
+    // setIsMenuShown(!isMenuShown)
+  }
   return (
-    <header className="header">
-      <nav className="nav container">
-        <a href="index.html" className="nav__logo">
+    <header className={css.header}>
+      <nav className={`${css.nav} container`}>
+        <a href="index.html" className={css.nav__logo}>
           Smith
         </a>
 
-        <div className="nav__menu">
-          <ul className="nav__list grid">
-            <li className="nav__item">
-              <a href="#home" className="nav__link active-link">
-                <i className="uil uil-estate nav__icon"></i>Home
+        <div
+          className={
+            isMenuShown ? `${css.nav__menu} ${css['show-menu']}` : css.nav__menu
+          }
+        >
+          <ul className={`${css.nav__list} grid`}>
+            <li className={css.nav__item}>
+              <a
+                href="#home"
+                className={`${css.nav__link} ${css['active-link']}`}
+              >
+                <i className={`${css.nav__icon} uil uil-estate`}></i>
+                Home
               </a>
             </li>
 
-            <li className="nav__item">
-              <a href="#about" className="nav__link">
-                <i className="uil uil-user nav__icon"></i>About
+            <li className={css.nav__item}>
+              <a href="#about" className={css.nav__link}>
+                <i className={`${css.nav__icon} uil uil-user`}></i>
+                About
               </a>
             </li>
 
-            <li className="nav__item">
-              <a href="#skills" className="nav__link">
-                <i className="uil uil-file-alt nav__icon"></i>Skills
+            <li className={css.nav__item}>
+              <a href="#skills" className={css.nav__link}>
+                <i className={`${css.nav__icon} uil uil-file-alt`}></i>
+                Skills
               </a>
             </li>
 
-            <li className="nav__item">
-              <a href="#services" className="nav__link">
-                <i className="uil uil-briefcase-alt nav__icon"></i>Services
+            <li className={css.nav__item}>
+              <a href="#services" className={css.nav__link}>
+                <i className={`${css.nav__icon} uil uil-briefcase-alt`}></i>
+                Services
               </a>
             </li>
 
-            <li className="nav__item">
-              <a href="#portfolio" className="nav__link">
-                <i className="uil uil-scenery nav__icon"></i>Portfolio
+            <li className={css.nav__item}>
+              <a href="#portfolio" className={css.nav__link}>
+                <i className={`${css.nav__icon} uil uil-scenery`}></i>
+                Portfolio
               </a>
             </li>
 
-            <li className="nav__item">
-              <a href="#contacts" className="nav__link">
-                <i className="uil uil-message nav__icon"></i>Contacts
+            <li className={css.nav__item}>
+              <a href="#contacts" className={css.nav__link}>
+                <i className={`${css.nav__icon} uil uil-message`}></i>
+                Contacts
               </a>
             </li>
           </ul>
 
-          <i className="uil uil-times nav_close"></i>
+          <i
+            className={`${css.nav__close} uil uil-times`}
+            onClick={handleMenuClick}
+          ></i>
         </div>
 
-        <div className="nav_toggle">
+        <div className={css.nav__toggle} onClick={handleMenuClick}>
           <i className="uil uil-apps"></i>
         </div>
       </nav>

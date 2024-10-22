@@ -116,7 +116,7 @@ img {
   height: auto;
 }
 
-/* Common */
+/* Common - section, container, grid, button */
 .section {
   padding: 6rem 0 2rem;
 }
@@ -157,7 +157,7 @@ img {
   font-weight: var(--font-medium);
 }
 
-button:hover {
+.button:hover {
   background-color: var(--title-color-dark);
 }
 
